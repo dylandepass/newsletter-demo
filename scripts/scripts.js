@@ -41,25 +41,28 @@ HelixApp.init({
 
 
     const date = getMetadata('date');
-    const dateElement = document.createElement('span');
-    dateElement.textContent = ` (${date})`;
-    document.querySelector('h1').appendChild(dateElement);
-
     const author = getMetadata('author');
     const authorTitle = getMetadata('author-title');
 
-    const authorParagraph = document.createElement('p');
-    const authorStrong = document.createElement('strong');
-    authorStrong.textContent = author;
-    authorParagraph.appendChild(authorStrong);
-    authorParagraph.style.paddingBottom = '0px';
+    if (author && authorTitle) {
+      const dateElement = document.createElement('span');
+      dateElement.textContent = ` (${date})`;
+      document.querySelector('h1').appendChild(dateElement);
 
-    const authorTitleParagraph = document.createElement('p');
-    authorTitleParagraph.textContent = authorTitle;
-    authorTitleParagraph.style.paddingTop = '0px';
 
-    main.querySelector(':scope div:nth-child(1)').appendChild(authorParagraph);
-    main.querySelector(':scope div:nth-child(1)').appendChild(authorTitleParagraph);
+      const authorParagraph = document.createElement('p');
+      const authorStrong = document.createElement('strong');
+      authorStrong.textContent = author;
+      authorParagraph.appendChild(authorStrong);
+      authorParagraph.style.paddingBottom = '0px';
+
+      const authorTitleParagraph = document.createElement('p');
+      authorTitleParagraph.textContent = authorTitle;
+      authorTitleParagraph.style.paddingTop = '0px';
+
+      main.querySelector(':scope div:nth-child(1)').appendChild(authorParagraph);
+      main.querySelector(':scope div:nth-child(1)').appendChild(authorTitleParagraph);
+    }
   })
   .withDecorateSections((main) => {
     decorateSections(main);
