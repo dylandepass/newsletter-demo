@@ -15,7 +15,7 @@ async function prepareEmailTemplate(sk) {
   const template = document.createElement('html');
   template.innerHTML = await resp.text();
 
-  // Make images relative.. Not sure why this works.. else it's relative
+  // Make images url's absolute.. Not sure why this works.. else it's relative
   document.querySelectorAll('img').forEach((img) => {
     img.src = `${img.src}`;
   });
@@ -30,9 +30,9 @@ async function prepareEmailTemplate(sk) {
 }
 
 window.hlx.initSidekick({
-  project: 'Helix Campaign',
+  project: 'DX Products Newsletter',
   hlx3: true,
-  host: 'main--helix-html-email--dylandepass.hlx.live',
+  host: 'main--dx-products-newsletter--hlxsites.hlx.live',
   plugins: [
     {
       id: 'generate-email-template',
