@@ -11,6 +11,14 @@
  */
 
 export default async function decorate(block) {
+  const resp = await fetch(`header.plain.html`);
+  const header = document.createElement('div');
+  header.innerHTML = await resp.text();
+  const image = header.querySelector('img');
+
+  image.style.cssText = "display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;";
+  image.style.width = "100%";
+
   block.innerHTML = /*html*/`
     <table width="100%" style="border: 0px;border-collapse: collapse;border-spacing: 0px;"> 
       <tbody>
@@ -19,9 +27,7 @@ export default async function decorate(block) {
           <table width="100%"> 
             <tbody>
               <tr> 
-                <td align="center" style="padding:0;Margin:0;font-size:0px">
-                  <img src="https://main--helix-html-email--dylandepass.hlx.live/media_1545564730c4c6508fc6e0542307c221d6d539471.jpeg?width=2000&format=webply&optimize=medium" alt="" loading="eager" style="display: block; border: 0px; outline: none; text-decoration: none; width: 100%;">
-                </td> 
+                <td align="center" style="padding:0;Margin:0;font-size:0px">${image.outerHTML}</td> 
               </tr> 
             </tbody>
           </table>
