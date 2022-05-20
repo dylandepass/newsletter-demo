@@ -39,7 +39,6 @@ HelixApp.init({
       h3.remove();
     });
 
-
     const date = getMetadata('date');
     const author = getMetadata('author');
     const authorTitle = getMetadata('author-title');
@@ -136,6 +135,12 @@ HelixApp.init({
     const footer = document.querySelector('footer');
     emailTemplate.append(footer);
     main.remove();
+
+    const subjectLine = getMetadata('subject-line');
+    const subjectLineSpan = document.createElement('span');
+    subjectLineSpan.textContent = subjectLine;
+    subjectLineSpan.style.display = 'none';
+    emailTemplate.prepend(subjectLineSpan);
 
     setTimeout(() => {
       document.querySelector('body').classList.add('appear');
