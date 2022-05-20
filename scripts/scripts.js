@@ -136,11 +136,11 @@ HelixApp.init({
     emailTemplate.append(footer);
     main.remove();
 
-    const subjectLine = getMetadata('subject-line');
-    const subjectLineSpan = document.createElement('span');
-    subjectLineSpan.textContent = subjectLine;
-    subjectLineSpan.style.display = 'none';
-    emailTemplate.prepend(subjectLineSpan);
+    const previewText = getMetadata('preview-text');
+    const previewTextSpan = document.createElement('span');
+    previewTextSpan.textContent = previewText;
+    previewTextSpan.style.display = 'none';
+    emailTemplate.prepend(previewTextSpan);
 
     setTimeout(() => {
       document.querySelector('body').classList.add('appear');
