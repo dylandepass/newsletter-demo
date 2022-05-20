@@ -68,7 +68,7 @@ export default async function decorate(block) {
                                 <tr>
                                   <td align="left" style="padding:0;Margin:0;font-size:0px">
                                     <img
-                                      src="/media_15f15310c842fda313ae358d7cebdbff6a5f9fd98.jpeg?width=750&format=jpeg&optimize=medium"
+                                      src="https://main--helix-html-email--dylandepass.hlx.live/media_15f15310c842fda313ae358d7cebdbff6a5f9fd98.jpeg?width=750&format=jpeg&optimize=medium"
                                       alt=""
                                       style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
                                       width="32" height="44">
