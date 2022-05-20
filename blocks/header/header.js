@@ -18,6 +18,7 @@ export default async function decorate(block) {
 
   image.style.cssText = "display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;";
   image.style.width = "100%";
+  image.src = image.src.split('?')[0];
 
   block.innerHTML = /*html*/`
     <table width="100%" style="border: 0px;border-collapse: collapse;border-spacing: 0px;"> 
