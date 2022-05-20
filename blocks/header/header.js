@@ -11,7 +11,6 @@
  */
 
 export default async function decorate(block) {
-  // Try and trigger codebus update?
   block.innerHTML = /*html*/`
     <table width="100%" style="border: 0px;border-collapse: collapse;border-spacing: 0px;"> 
       <tbody>
