@@ -32,11 +32,11 @@ async function prepareEmailTemplate(sk) {
 window.hlx.initSidekick({
   project: 'DX Products Newsletter',
   hlx3: true,
-  host: 'main--dx-products-newsletter--hlxsites.hlx.live',
+  host: 'helix-campaign.experience-adobe.com',
   plugins: [
     {
       id: 'generate-email-template',
-      condition: () => window.location.host.includes('hlx.live'),
+      condition: () => window.location.host.includes('helix-campaign.experience-adobe.com'),
       button: {
         text: 'Generate Email Template',
         isDropdown: false,
