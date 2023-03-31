@@ -13,7 +13,7 @@
 
 const sk = document.querySelector('helix-sidekick');
 sk.addEventListener('custom:generate-email-template', () => {
-  const resp = await fetch(`./export-template.html`);
+  const resp = await fetch(`../../export-template.html`);
   const template = document.createElement('html');
   template.innerHTML = await resp.text();
 
