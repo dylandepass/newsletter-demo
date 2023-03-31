@@ -26,6 +26,8 @@ sk.addEventListener('custom:generate-email-template', async () => {
   template.querySelector('body').append(content);
 
   navigator.clipboard.writeText(template.outerHTML).then(() => {
-    alert('Copied to clipboard');
+    setTimeout(() => {
+      alert('Block Copied to Clipboard');
+    }, 1000);
   });
 });
